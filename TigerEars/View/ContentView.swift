@@ -39,10 +39,21 @@ struct MainView: View {
                     .frame(width:30, height: 30)
                     .foregroundColor(.white)
                 
-            }
+                Button(action: {
+                    print("Button pressed")
+                }, label: {
+                    Image(systemName: "mic.fill")
+                        .resizable()
+                        .frame(width: 40, height: 60, alignment: .center)
+                        .foregroundColor(.white)
+                })
+                    .padding(.top, 40)
+                    .padding(30)
+                
+            }// fin de VStack
             
             
-        }// fin de zstack
+        }// fin de ZStack
         
     }// fin de body
 }// fin de MainView
