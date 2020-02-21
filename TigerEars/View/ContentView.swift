@@ -17,17 +17,20 @@ struct ContentView: View {
 
 struct MainView: View {
     
-    // obligé afin de pouvoir voir la View
+    @State private var animationAmount: CGFloat = 1
+    @State private var isRecording: Bool = false
+    
+    // we always use this syntax in order to declare a View
     var body: some View {
         
-        // on créer un index de profondeur
+        // ZStack allow to stack components on top of one another
         ZStack {
-            // fond d'écran
-            LinearGradient(gradient: Gradient(colors: [Color("darkPurple"), Color("mainPurple"), Color("mainPink"), Color("lightPink")]), startPoint: .top, endPoint: .bottom)
+            // background of our View
+            LinearGradient(gradient: Gradient(colors: [Color("darkBrown"), Color("darkOrange"), Color("mainOrange"), Color("lightOrange")]), startPoint: .top, endPoint: .bottom)
                 // ignore toute la Safe Area
                 .edgesIgnoringSafeArea(.all)
             
-            // englobe nos composants
+            // VStack gather our components on a vertical axis
             VStack {
                 Text("TAP TO RECORD")
                     .foregroundColor(.white)
@@ -41,22 +44,45 @@ struct MainView: View {
                 
                 Button(action: {
                     print("Button pressed")
+                    self.isRecording.toggle()
+                    
+                    if self.isRecording == false {
+                        print("Recording paused")
+                        self.animationAmount = 1
+                    }
+                    else {
+                        print("Recording")
+                        self.animationAmount += 1
+                    }
+                    
                 }, label: {
                     Image(systemName: "mic.fill")
+// Customization for the button itself
                         .resizable()
                         .frame(width: 40, height: 60, alignment: .center)
+                        .padding(40)
+                        .background(Color("lightOrange"))
                         .foregroundColor(.white)
+                        .clipShape(Circle())
+                        
+// Customization for the circle after tapping the button
+                        .overlay(
+                            Circle()
+                                .stroke(Color("lightOrange"), lineWidth: 2)
+                                .scaleEffect(animationAmount)
+                                .opacity(Double(2 - animationAmount))
+                                .animation(
+                                    Animation.easeInOut(duration: 1.5)
+                                    .repeatCount(6, autoreverses: true)
+                            )
+                    )
                 })
                     .padding(.top, 40)
-                    .padding(30)
-                
-            }// fin de VStack
-            
-            
-        }// fin de ZStack
-        
-    }// fin de body
-}// fin de MainView
+                    .padding(20)
+            }// end of VStack
+        }// end of ZStack
+    }// end of body
+}// end of MainView
 
 
 
