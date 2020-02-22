@@ -33,7 +33,7 @@ struct TigerStripesView: View {
 //                        .padding(.bottom, -200)
                     RightStripeView()
                     .padding(.leading, 300)
-                    .padding(.top, -400)
+                    .padding(.top, -395)
                     .padding(.bottom, -280)
                 }
                 .frame(width: 414, height: 500)
@@ -41,7 +41,7 @@ struct TigerStripesView: View {
 //                Second half of the screen
                 VStack {
                     LeftStripeView()
-                        .padding(.top, -190)
+                        .padding(.top, -150)
                         .padding(.bottom, -300)
                         .padding(.leading, -220)
                     TopRightStripeView()
@@ -52,9 +52,20 @@ struct TigerStripesView: View {
                         .rotationEffect(.degrees(-15))
                         .padding(.top, -450)
                         .padding(.leading, -700)
+                    RightStripeView()
+                        .padding(.top, -590)
+                        .padding(.bottom, -300)
+                        .padding(.leading, 800)
                     LightStraightStripeView()
                         .rotationEffect(.degrees(-4))
                         .padding(.top, -260)
+                    TopLeftStripeView()
+                        .padding(.top, -470)
+                        .padding(.bottom, -500)
+                    StraightStripeView()
+                        .rotationEffect(.degrees(-10))
+                        .padding(.top, -140)
+                        .padding(.bottom, -30)
                 }
                 .frame(width: 414, height: 500)
                 
