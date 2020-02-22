@@ -19,6 +19,7 @@
 		3C3FDA2E24018871001861FD /* LinearTigerStripes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3FDA2D24018871001861FD /* LinearTigerStripes.swift */; };
 		3C3FDA302401889C001861FD /* ArrowTigerStripes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3FDA2F2401889C001861FD /* ArrowTigerStripes.swift */; };
 		3C3FDA32240188C0001861FD /* BoltTigerStripes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3FDA31240188C0001861FD /* BoltTigerStripes.swift */; };
+		3C3FDA3624019E4A001861FD /* MajorStripe.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C3FDA3524019E4A001861FD /* MajorStripe.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		3C3FDA2D24018871001861FD /* LinearTigerStripes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearTigerStripes.swift; sourceTree = "<group>"; };
 		3C3FDA2F2401889C001861FD /* ArrowTigerStripes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowTigerStripes.swift; sourceTree = "<group>"; };
 		3C3FDA31240188C0001861FD /* BoltTigerStripes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoltTigerStripes.swift; sourceTree = "<group>"; };
+		3C3FDA3524019E4A001861FD /* MajorStripe.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MajorStripe.ttf; path = ../../../../Library/Fonts/MajorStripe.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				3C3FDA1E240002E0001861FD /* App Lifecycle */,
 				3C3FDA1C2400029D001861FD /* View */,
 				3C3FDA1D240002B6001861FD /* Model */,
+				3C3FDA3424019E07001861FD /* Font */,
 				3C3FDA0C23FEDAD2001861FD /* Assets.xcassets */,
 				3C3FDA1123FEDAD2001861FD /* LaunchScreen.storyboard */,
 				3C3FDA1423FEDAD2001861FD /* Info.plist */,
@@ -123,6 +126,14 @@
 				3C3FDA31240188C0001861FD /* BoltTigerStripes.swift */,
 			);
 			path = TigerStripes;
+			sourceTree = "<group>";
+		};
+		3C3FDA3424019E07001861FD /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				3C3FDA3524019E4A001861FD /* MajorStripe.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +197,7 @@
 				3C3FDA1323FEDAD2001861FD /* LaunchScreen.storyboard in Resources */,
 				3C3FDA1023FEDAD2001861FD /* Preview Assets.xcassets in Resources */,
 				3C3FDA0D23FEDAD2001861FD /* Assets.xcassets in Resources */,
+				3C3FDA3624019E4A001861FD /* MajorStripe.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

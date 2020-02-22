@@ -30,10 +30,10 @@ struct MainView: View {
             // VStack gather our components on a vertical axis
             VStack {
                 
-                
                 Text("TAP TO RECORD")
                     .foregroundColor(.white)
-                    .font(.title)
+//                    .font(.title)
+                    .font(.custom("MajorStripe", size: 60))
                     .fontWeight(.light)
                 
                 Image(systemName: "arrowtriangle.down.fill")
@@ -41,6 +41,7 @@ struct MainView: View {
                     .frame(width:30, height: 30)
                     .foregroundColor(.white)
                     .padding(.bottom, 50)
+                    .padding(.top, -10)
                 
 // Button made from the ButtonView
                 ButtonView(animationAmount: animationAmount, isRecording: isRecording)
