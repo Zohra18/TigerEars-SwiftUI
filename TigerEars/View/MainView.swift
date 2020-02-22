@@ -23,8 +23,14 @@ struct MainView: View {
                 // ignore toute la Safe Area
                 .edgesIgnoringSafeArea(.all)
             
+            VStack {
+                TigerStripesView()
+            }
+            
             // VStack gather our components on a vertical axis
             VStack {
+                
+                
                 Text("TAP TO RECORD")
                     .foregroundColor(.white)
                     .font(.title)
@@ -38,6 +44,7 @@ struct MainView: View {
                 
 // Button made from the ButtonView
                 ButtonView(animationAmount: animationAmount, isRecording: isRecording)
+                .zIndex(0)
                 
             }// end of VStack
         }// end of ZStack
