@@ -16,6 +16,9 @@
 		3C3FDA2024005BAE001861FD /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3FDA1F24005BAE001861FD /* ButtonView.swift */; };
 		3C3FDA2224005E8B001861FD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3FDA2124005E8B001861FD /* MainView.swift */; };
 		3C3FDA2424006025001861FD /* TigerStripesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3FDA2324006025001861FD /* TigerStripesView.swift */; };
+		3C3FDA2E24018871001861FD /* LinearTigerStripes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3FDA2D24018871001861FD /* LinearTigerStripes.swift */; };
+		3C3FDA302401889C001861FD /* ArrowTigerStripes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3FDA2F2401889C001861FD /* ArrowTigerStripes.swift */; };
+		3C3FDA32240188C0001861FD /* BoltTigerStripes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3FDA31240188C0001861FD /* BoltTigerStripes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		3C3FDA1F24005BAE001861FD /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		3C3FDA2124005E8B001861FD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		3C3FDA2324006025001861FD /* TigerStripesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TigerStripesView.swift; sourceTree = "<group>"; };
+		3C3FDA2D24018871001861FD /* LinearTigerStripes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearTigerStripes.swift; sourceTree = "<group>"; };
+		3C3FDA2F2401889C001861FD /* ArrowTigerStripes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowTigerStripes.swift; sourceTree = "<group>"; };
+		3C3FDA31240188C0001861FD /* BoltTigerStripes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoltTigerStripes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,7 @@
 		3C3FDA1D240002B6001861FD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3C3FDA2A2401879C001861FD /* TigerStripes */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -106,6 +113,16 @@
 				3C3FDA0623FEDACF001861FD /* AppDelegate.swift */,
 			);
 			path = "App Lifecycle";
+			sourceTree = "<group>";
+		};
+		3C3FDA2A2401879C001861FD /* TigerStripes */ = {
+			isa = PBXGroup;
+			children = (
+				3C3FDA2D24018871001861FD /* LinearTigerStripes.swift */,
+				3C3FDA2F2401889C001861FD /* ArrowTigerStripes.swift */,
+				3C3FDA31240188C0001861FD /* BoltTigerStripes.swift */,
+			);
+			path = TigerStripes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +197,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C3FDA0723FEDACF001861FD /* AppDelegate.swift in Sources */,
+				3C3FDA2E24018871001861FD /* LinearTigerStripes.swift in Sources */,
+				3C3FDA32240188C0001861FD /* BoltTigerStripes.swift in Sources */,
+				3C3FDA302401889C001861FD /* ArrowTigerStripes.swift in Sources */,
 				3C3FDA2424006025001861FD /* TigerStripesView.swift in Sources */,
 				3C3FDA0923FEDACF001861FD /* SceneDelegate.swift in Sources */,
 				3C3FDA2024005BAE001861FD /* ButtonView.swift in Sources */,
