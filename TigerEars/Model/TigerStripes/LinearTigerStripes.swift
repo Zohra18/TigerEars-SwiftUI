@@ -11,14 +11,16 @@ import SwiftUI
 
 // Big straight line stripe
 struct StraightStripeView: View {
+    
+    @Binding var colorSwitch: Bool
+    
     var body: some View {
         ZStack {
             
-            Color("darkStripe")
-            .frame(width: 500, height: 100)
-            .foregroundColor(Color("darkStripe"))
+            Color(colorSwitch ? "golden" : "darkStripe")
+                .frame(width: 500, height: 100)
                 .rotationEffect(.degrees(7))
-            .shadow(color: Color("darkStripe"), radius: 10)
+                .shadow(color: Color(colorSwitch ? "lightGolden" : "darkStripe"), radius: 10)
         }
         
     }
@@ -26,14 +28,16 @@ struct StraightStripeView: View {
 
 // Medium straight line stripe
 struct ThinStraightStripeView: View {
+    
+    @Binding var colorSwitch: Bool
+    
     var body: some View {
         ZStack {
             
-            Color("darkStripe")
-            .frame(width: 500, height: 60)
-            .foregroundColor(Color("darkStripe"))
+            Color(colorSwitch ? "golden" : "darkStripe")
+                .frame(width: 500, height: 60)
                 .rotationEffect(.degrees(7))
-            .shadow(color: Color("darkStripe"), radius: 10)
+                .shadow(color: Color(colorSwitch ? "lightGolden" : "darkStripe"), radius: 10)
         }
         
     }
@@ -41,14 +45,15 @@ struct ThinStraightStripeView: View {
 
 // Light straight line stripe
 struct LightStraightStripeView: View {
+    
+    @Binding var colorSwitch: Bool
+    
     var body: some View {
         ZStack {
-            
-            Color("darkStripe")
-            .frame(width: 500, height: 30)
-            .foregroundColor(Color("darkStripe"))
+            Color(colorSwitch ? "golden" : "darkStripe")
+                .frame(width: 500, height: 30)
                 .rotationEffect(.degrees(7))
-            .shadow(color: Color("darkStripe"), radius: 10)
+                .shadow(color: Color(colorSwitch ? "lightGolden" : "darkStripe"), radius: 10)
         }
         
     }

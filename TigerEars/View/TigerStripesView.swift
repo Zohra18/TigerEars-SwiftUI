@@ -9,6 +9,9 @@
 import SwiftUI
 
 struct TigerStripesView: View {
+    
+    @Binding var colorState: Bool
+    
     var body: some View {
         
         ZStack {
@@ -17,21 +20,22 @@ struct TigerStripesView: View {
                 
 //                First half of the screen
                 VStack {
-                    StraightStripeView()
+                    StraightStripeView(colorSwitch: $colorState)
                         .padding(.top, 160)
                         .padding(.bottom, -220)
-                    TopLeftStripeView()
+                    TopLeftStripeView(colorSwitch: $colorState)
                         .padding(.top, -5)
-                    TopRightStripeView()
+                    TopRightStripeView(colorSwitch: $colorState)
                         .padding(.top, -470)
-                    LeftStripeView()
-                    .padding(.top, -430)
+                    LeftStripeView(colorSwitch: $colorState)
+                    .padding(.top, -450)
                     .padding(.leading, -110)
-                    ThinStraightStripeView()
+                        .padding(.bottom, 10)
+                    ThinStraightStripeView(colorSwitch: $colorState)
                         .rotationEffect(.degrees(163))
                         .padding(.top, -230)
 //                        .padding(.bottom, -200)
-                    RightStripeView()
+                    RightStripeView(colorSwitch: $colorState)
                     .padding(.leading, 300)
                     .padding(.top, -395)
                     .padding(.bottom, -280)
@@ -40,29 +44,30 @@ struct TigerStripesView: View {
                 
 //                Second half of the screen
                 VStack {
-                    LeftStripeView()
+                    LeftStripeView(colorSwitch: $colorState)
+                        .background(Color.blue)
                         .padding(.top, -150)
                         .padding(.bottom, -300)
                         .padding(.leading, -220)
-                    TopRightStripeView()
+                    TopRightStripeView(colorSwitch: $colorState)
                         .padding(.top, -100)
                         .rotationEffect(.degrees(-18))
                         .padding(.leading, -270)
-                    TopRightStripeView()
+                    TopRightStripeView(colorSwitch: $colorState)
                         .rotationEffect(.degrees(-15))
                         .padding(.top, -450)
                         .padding(.leading, -700)
-                    RightStripeView()
+                    RightStripeView(colorSwitch: $colorState)
                         .padding(.top, -590)
                         .padding(.bottom, -300)
                         .padding(.leading, 800)
-                    LightStraightStripeView()
+                    LightStraightStripeView(colorSwitch: $colorState)
                         .rotationEffect(.degrees(-4))
                         .padding(.top, -260)
-                    TopLeftStripeView()
+                    TopLeftStripeView(colorSwitch: $colorState)
                         .padding(.top, -470)
                         .padding(.bottom, -500)
-                    StraightStripeView()
+                    StraightStripeView(colorSwitch: $colorState)
                         .rotationEffect(.degrees(-10))
                         .padding(.top, -140)
                         .padding(.bottom, -30)
@@ -81,7 +86,7 @@ struct TigerStripesView: View {
 
 struct TigerStripesView_Previews: PreviewProvider {
     static var previews: some View {
-        TigerStripesView()
+        TigerStripesView(colorState: .constant(false))
     }
 }
 
